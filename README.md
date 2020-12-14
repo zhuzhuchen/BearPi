@@ -1,6 +1,5 @@
-# BearPi环境配置
+# BearPi虚拟机环境配置
 
-## 安装vmware和ubuntu虚拟机
 
 #### 百度下载vmware安装
 
