@@ -108,7 +108,24 @@ sudo systemctl start samba
 git clone https://gitee.com/bearpi/bearpi-hm_nano -b master
 ~~~
 
-
+漏了一个nodejs,不过我刚开始没安装貌似也可以
+1. 下载nodejs[nodejs](https://nodejs.org/dist/v14.15.1/node-v14.15.1-linux-x64.tar.xz)
+2. 解压
+~~~ bash
+tar xvpf node-v14.15.1-linux-x64.tar.xz
+~~~
+3. 移动到opt目录下
+~~~ bash
+sudo mv node-v14.15.1-linux-x64 /opt/node
+~~~
+4. 添加全局环境变量
+~~~ bash
+sudo nano /etc/environment
+# 在最后双引号前面加上:/opt/node/bin
+# 保存内容按ctrl+x
+# 最终内容如下
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/gcc_riscv32/bin:/opt/gn:/opt/ninja:/opt/node/bin"
+~~~
 
 
 
