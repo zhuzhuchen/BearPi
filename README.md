@@ -52,30 +52,25 @@ sudo pip3 install scons
 
 ~~~
 
-安装gn
+安装gn,ninja,gcc_riscv32
 
-1. 打开Linux编译服务器终端。
-2. [下载gn工具](http://tools.harmonyos.com/mirrors/gn/1523/linux/gn.1523.tar)。
-3. 解压gn安装包至~/gn路径下："tar -xvf gn.1523.tar -C ~/"。
-4. 设置环境变量："vim ~/.bashrc", 新增："export PATH=~/gn:$PATH"。
-5. 生效环境变量："source ~/.bashrc"。
 
-安装ninja
-
-1. 打开Linux编译服务器终端
+1. [下载gn工具](http://tools.harmonyos.com/mirrors/gn/1523/linux/gn.1523.tar)。
 2. [下载ninja工具](http://tools.harmonyos.com/mirrors/ninja/1.9.0/linux/ninja.1.9.0.tar)。
-3. 解压ninja安装包至~/ninja路径下："tar -xvf ninja.1.9.0.tar -C ~/"。
-4. 设置环境变量："vim ~/.bashrc", 新增："export PATH=~/ninja:$PATH"。
-5. 生效环境变量："source ~/.bashrc"。
+3. [下载gcc_riscv32工具](http://tools.harmonyos.com/mirrors/gcc_riscv32/7.3.0/linux/gcc_riscv32-linux-7.3.0.tar.gz)。
+4. 解压以上文件
+~~~ bash
+tar xvpf gn.1523.tar
+tar xvpf ninja.1.9.0.tar
+tar xvpf gcc_riscv32-linux-7.3.0.tar.gz
+# 移动到opt目录下
+sudo mv gn ninja gcc_riscv32 /opt/
+#设置环境变量,我设置的是全局环境变量,一定不能输入错误的信息
+sudo nano /etc/environment
+#在最后双引号前面加上:/opt/gcc_riscv32/bin:/opt/gn:/opt/ninja:/opt/node/bin
+# 最终内容如下
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/gcc_riscv32/bin:/opt/gn:/opt/ninja"
 
-安装gcc_riscv32（WLAN模组类编译工具链）
-
-1. 打开Linux编译服务器终端。
-2. [下载gcc_riscv32工具](http://tools.harmonyos.com/mirrors/gcc_riscv32/7.3.0/linux/gcc_riscv32-linux-7.3.0.tar.gz)。
-3. 解压gcc_riscv32安装包至/opt/gcc_riscv32路径下："tar -xvf gcc_riscv32-linux-7.3.0.tar.gz -C ~/"。
-4. 设置环境变量："vim ~/.bashrc"，新增："export PATH=~/gcc_riscv32/bin:$PATH"。
-5. 生效环境变量："source ~/.bashrc"。
-6. Shell命令行中输入“riscv32-unknown-elf-gcc -v”，如果能正确显示编译器版本号，表明编译器安装成功。
 
 安装配置samba
 
