@@ -163,6 +163,7 @@ devicetool-device-1.0.0.1.zip得到DevEcoDeviceTool-1.0.1.vsix,打开vscodium或
 
 #### 下载[MobaXterm](https://mobaxterm.mobatek.net/)
 按照[小熊派开发环境搭建配置mobaxterm](https://gitee.com/bearpi/bearpi-hm_nano/blob/master/applications/BearPi/BearPi-HM_Nano/docs/quick-start/BearPi-HM_Nano%E5%BC%80%E5%8F%91%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83.md)连接虚拟机,当然只用虚拟机提供的ssh也可以
+
 关于虚拟机ip地址:
 1. 用虚拟机自带的ssh连接,在输入用户名的时候,命令行里面会显示ip地址
 2. ubuntu server在虚拟机里面登陆的时候会提示你一些系统信息,包含ip地址
