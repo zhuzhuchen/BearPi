@@ -71,6 +71,7 @@ sudo nano /etc/environment
 # 最终内容如下
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/gcc_riscv32/bin:/opt/gn:/opt/ninja"
 
+~~~
 
 安装配置samba
 
