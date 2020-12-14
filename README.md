@@ -29,6 +29,7 @@ sudo systemctl start ssh
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
 sudo nano /etc/apt/sources.list
 # 添加以下内容
+
 #####################################################
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
@@ -45,6 +46,8 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted 
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
 #####################################################
 
+
+# 升级系统
 sudo apt update
 sudo apt upgrade
 ~~~
