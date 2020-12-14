@@ -27,6 +27,8 @@ sudo systemctl start ssh
 ~~~ bash
 # 参考[清华软件源帮助](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)改一下软件源,先备份一下 
 sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+
+# 配置软件源
 sudo nano /etc/apt/sources.list
 # 添加以下内容
 
