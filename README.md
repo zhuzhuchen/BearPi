@@ -158,17 +158,16 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 
 #### 下载[VSCode](https://mirrors.tuna.tsinghua.edu.cn/github-release/VSCodium/vscodium/LatestRelease/)并安装,我选用的是社区版的vscodium,功能基本一致
 #### 下载[HUAWEI DevEco Device Tool](https://device.harmonyos.com/cn/ide)并安装
-1. devicetool-device-1.0.0.1.zip得到DevEcoDeviceTool-1.0.1.vsix,打开vscodium或vscode按ctrl+shift+x打开扩展管理,将vsix文件拖放到这里完成安装
-
-2. 在windows文件管理器打开C:\Users\你的用户名\.vscode-oss\extensions\huawei.devecodevicetool-1.0.1\deveco\tools找到hiburn.exe,复制到你能找到的位置,这是烧录程序
+devicetool-device-1.0.0.1.zip得到DevEcoDeviceTool-1.0.1.vsix,打开vscodium或vscode按ctrl+shift+x打开扩展管理,将vsix文件拖放到这里完成安装
+在windows文件管理器打开C:\Users\你的用户名\.vscode-oss\extensions\huawei.devecodevicetool-1.0.1\deveco\tools找到hiburn.exe,复制到你能找到的位置,这是烧录程序
 
 #### 下载[MobaXterm](https://mobaxterm.mobatek.net/)
 按照[小熊派开发环境搭建配置mobaxterm](https://gitee.com/bearpi/bearpi-hm_nano/blob/master/applications/BearPi/BearPi-HM_Nano/docs/quick-start/BearPi-HM_Nano%E5%BC%80%E5%8F%91%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83.md)连接虚拟机,当然只用虚拟机提供的ssh也可以
 
-3. 编译
+#### 编译
 ssh或者mobaxterm连接到虚拟机后cd命令切换到你的源码目录,执行python build.py BearPi-HM_Nano开始编译
 
-4. 烧录
+#### 烧录
 用第二步得到的hiburn.exe烧录程序
 
 
