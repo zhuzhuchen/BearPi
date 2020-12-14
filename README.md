@@ -2,9 +2,9 @@
 
 ## 安装vmware和ubuntu虚拟机
 
-百度下载vmware安装
+#### 百度下载vmware安装
 
-下载[系统镜像](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/20.04.1/ubuntu-20.04.1-live-server-amd64.iso)并安装
+#### 下载[系统镜像](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/20.04.1/ubuntu-20.04.1-live-server-amd64.iso)并安装
 
 我选用的是ubuntu 20.04 server版本,放在后台运行没有图形界面省资源,带图形界面的可以
 
