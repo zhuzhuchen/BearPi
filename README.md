@@ -14,6 +14,7 @@
 
 系统安装最后记得有个选项开启ssh要记得开(带图形界面的没有这个选项),忘了也没关系后面进系统可以再安装启用
 
+#### 连接虚拟机,点击虚拟机菜单栏(虚拟机-SSH-连接到SSH),会弹出命令窗口输入用户名和密码即可连接
 #### 如果系统安装时忘了启用ssh可以执行以下命令
 
 ~~~ bash
@@ -55,9 +56,6 @@ sudo apt upgrade
 ~~~
 
 
-
-
-#### 连接虚拟机,点击虚拟机菜单栏(虚拟机-SSH-连接到SSH),会弹出命令窗口输入用户名和密码即可连接
 
 #### 参考小熊派环境搭建篇[BearPi-HM_Nano开发搭建环境](https://gitee.com/bearpi/bearpi-hm_nano/blob/master/applications/BearPi/BearPi-HM_Nano/docs/quick-start/BearPi-HM_Nano%E5%BC%80%E5%8F%91%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83.md)其中有些步骤可以省略,我列出我的步骤
 
