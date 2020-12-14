@@ -14,9 +14,37 @@
 
 系统安装最后记得有个选项开启ssh要记得开(带图形界面的没有这个选项),忘了也没关系后面进系统可以再安装启用
 
+#### 如果系统安装时忘了启用ssh可以执行以下命令
+
+~~~ bash
+sudo apt install openssh-server
+sudo systemctl enable ssh
+sudo systemctl start ssh
+~~~
+
 系统最好升级一下,我没升级也可以用
 
 ~~~ bash
+# 参考[清华软件源帮助](https://mirrors.tuna.tsinghua.edu.cn/help/ubuntu/)改一下软件源,先备份一下 
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo nano /etc/apt/sources.list
+# 添加以下内容
+#####################################################
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+
+# 预发布软件源，不建议启用
+# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+#####################################################
+
 sudo apt update
 sudo apt upgrade
 ~~~
@@ -25,13 +53,6 @@ sudo apt upgrade
 
 ## 配置系统环境
 
-#### 如果系统安装时忘了启用ssh可以执行以下命令
-
-~~~ bash
-sudo apt install openssh-server
-sudo systemctl enable ssh
-sudo systemctl start ssh
-~~~
 
 #### 连接虚拟机,点击虚拟机菜单栏(虚拟机-SSH-连接到SSH),会弹出命令窗口输入用户名和密码即可连接
 
