@@ -67,7 +67,8 @@ tar xvpf gcc_riscv32-linux-7.3.0.tar.gz
 sudo mv gn ninja gcc_riscv32 /opt/
 #设置环境变量,我设置的是全局环境变量,一定不能输入错误的信息
 sudo nano /etc/environment
-#在最后双引号前面加上:/opt/gcc_riscv32/bin:/opt/gn:/opt/ninja:/opt/node/bin
+# 在最后双引号前面加上:/opt/gcc_riscv32/bin:/opt/gn:/opt/ninja:/opt/node/bin
+# 保存内容按ctrl+x
 # 最终内容如下
 PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/gcc_riscv32/bin:/opt/gn:/opt/ninja"
 
