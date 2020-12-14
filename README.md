@@ -62,7 +62,9 @@ sudo apt upgrade
 #### 参考小熊派环境搭建篇[BearPi-HM_Nano开发搭建环境](https://gitee.com/bearpi/bearpi-hm_nano/blob/master/applications/BearPi/BearPi-HM_Nano/docs/quick-start/BearPi-HM_Nano%E5%BC%80%E5%8F%91%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83.md)其中有些步骤可以省略,我列出我的步骤
 
 ~~~ bash
-# 连接python3位python
+# 写在前面,ubuntu 20.04的默认python版本满足需求,不用再安装了,也不用去下载源码编译,直接按以下操作进行就行了
+
+# 链接python3为python
 cd /usr/bin
 ln -s python3 python
 # 安装pip,setuptools
@@ -74,8 +76,8 @@ sudo pip3 install pycryptodome
 #安装six
 sudo pip3 install six
 #安装ecdsa
-sudo pip3 install scons
-# 安装scons
+sudo pip3 install ecdsa
+# 安装scons,这里小熊派教程让下载scons,其实pip就可以安装,apt也可以安装(版本有些老),我这里用pip安装,你也可以按照小熊派的教程下载二进制包进行配置
 sudo pip3 install scons
 
 ~~~
@@ -107,7 +109,7 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 sudo apt install samba
 sudo systemctl enable samba
 sudo nano /etc/samba/smb.conf
-# 在最后添加以下内容
+# 在文件最后添加以下内容,ctrl+x保存文件
 [HarmonyOS_Code]
 path = 你要放源码的目录
 available = yes
@@ -125,7 +127,9 @@ sudo systemctl start samba
 
 ~~~
 
-在windows上映射网络地址
+#### 在windows上映射网络地址
+
+右键点击网络,映射网络驱动器,在文件夹填写"\\你的虚拟机ip地址\HarmonyOS_Code",按照提示输入你输入的samba用户名和密码
 
 
 
