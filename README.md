@@ -108,7 +108,7 @@ sudo systemctl start samba
 git clone https://gitee.com/bearpi/bearpi-hm_nano -b master
 ~~~
 
-漏了一个nodejs,不过我刚开始没安装貌似也可以
+漏了一个nodejs,不过我刚开始没安装貌似也可以,我是强迫症,软件源安装npm会依赖python2.7,所以我直接用的nodejs的二进制包(python2都停止维护了,还在依赖老旧软件)
 1. 下载nodejs[nodejs](https://nodejs.org/dist/v14.15.1/node-v14.15.1-linux-x64.tar.xz)
 2. 解压
 ~~~ bash
