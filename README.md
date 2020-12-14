@@ -2,9 +2,9 @@
 
 ## 安装vmware和ubuntu虚拟机
 
-1. 百度下载vmware安装
+百度下载vmware安装
 
-2. 下载[系统镜像](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/20.04.1/ubuntu-20.04.1-live-server-amd64.iso)并安装
+下载[系统镜像](https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/20.04.1/ubuntu-20.04.1-live-server-amd64.iso)并安装
 
 我选用的是ubuntu 20.04 server版本,放在后台运行没有图形界面省资源,带图形界面的可以
 
@@ -21,7 +21,7 @@ sudo apt upgrade
 
 ## 配置系统环境
 
-1. 如果系统安装时忘了启用ssh可以执行以下命令
+#### 如果系统安装时忘了启用ssh可以执行以下命令
 
 ~~~ bash
 sudo apt install openssh-server
@@ -29,9 +29,9 @@ sudo systemctl enable ssh
 sudo systemctl start ssh
 ~~~
 
-2. 连接虚拟机,点击虚拟机菜单栏(虚拟机-SSH-连接到SSH),会弹出命令窗口输入用户名和密码即可连接
+#### 连接虚拟机,点击虚拟机菜单栏(虚拟机-SSH-连接到SSH),会弹出命令窗口输入用户名和密码即可连接
 
-3. 参考小熊派环境搭建篇[BearPi-HM_Nano开发搭建环境](https://gitee.com/bearpi/bearpi-hm_nano/blob/master/applications/BearPi/BearPi-HM_Nano/docs/quick-start/BearPi-HM_Nano%E5%BC%80%E5%8F%91%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83.md)其中有些步骤可以省略,我列出我的步骤
+#### 参考小熊派环境搭建篇[BearPi-HM_Nano开发搭建环境](https://gitee.com/bearpi/bearpi-hm_nano/blob/master/applications/BearPi/BearPi-HM_Nano/docs/quick-start/BearPi-HM_Nano%E5%BC%80%E5%8F%91%E6%90%AD%E5%BB%BA%E7%8E%AF%E5%A2%83.md)其中有些步骤可以省略,我列出我的步骤
 
 ~~~ bash
 # 连接python3位python
@@ -52,8 +52,7 @@ sudo pip3 install scons
 
 ~~~
 
-4. 安装gn,ninja,gcc_riscv32
-
+#### 安装gn,ninja,gcc_riscv32
 
 1. [下载gn工具](http://tools.harmonyos.com/mirrors/gn/1523/linux/gn.1523.tar)。
 2. [下载ninja工具](http://tools.harmonyos.com/mirrors/ninja/1.9.0/linux/ninja.1.9.0.tar)。
@@ -74,7 +73,7 @@ PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/u
 
 ~~~
 
-5. 安装配置samba
+#### 安装配置samba
 
 ~~~ bash
 sudo apt install samba
@@ -102,14 +101,14 @@ sudo systemctl start samba
 
 
 
-6. 最后一件事,源码获取:
+#### 最后一件事,源码获取:
 
 ~~~ bash
 git clone https://gitee.com/bearpi/bearpi-hm_nano -b master
 ~~~
 
 
-7. 漏了一个nodejs,不过我刚开始没安装貌似也可以,我是强迫症,软件源安装npm会依赖python2.7,所以我直接用的nodejs的二进制包(python2都停止维护了,还在依赖老旧软件)
+#### 漏了一个nodejs,不过我刚开始没安装貌似也可以,我是强迫症,软件源安装npm会依赖python2.7,所以我直接用的nodejs的二进制包(python2都停止维护了,还在依赖老旧软件)
 1. 下载nodejs[nodejs](https://nodejs.org/dist/v14.15.1/node-v14.15.1-linux-x64.tar.xz)
 2. 解压
 ~~~ bash
